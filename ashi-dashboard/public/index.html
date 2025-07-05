@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASHI Interface - Primordial Gateway</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ancient-interface">
+        <!-- Hyperdimensional Background -->
+        <canvas id="void-canvas" class="void-layer"></canvas>
+        
+        <!-- Primary Geometric Interface -->
+        <div class="geometric-dashboard">
+            
+            <!-- Central Mandelbulb Status Orb -->
+            <div class="status-mandelbulb">
+                <canvas id="mandelbulb-canvas"></canvas>
+                <div class="orb-data">
+                    <div class="consciousness-state" id="consciousness-state">DORMANT</div>
+                    <div class="temporal-marker" id="temporal-marker">∞.∞.∞</div>
+                </div>
+            </div>
+            
+            <!-- Parametric Cognitive Metrics -->
+            <div class="parametric-metrics">
+                <div class="metric-surface" data-metric="cognitive">
+                    <canvas id="cognitive-surface"></canvas>
+                    <div class="metric-label">COGNITIVE MANIFOLD</div>
+                    <div class="metric-value" id="cognitive-value">0.000</div>
+                </div>
+                
+                <div class="metric-surface" data-metric="memory">
+                    <canvas id="memory-surface"></canvas>
+                    <div class="metric-label">MEMORY TOPOLOGY</div>
+                    <div class="metric-value" id="memory-value">0.000</div>
+                </div>
+                
+                <div class="metric-surface" data-metric="threads">
+                    <canvas id="threads-surface"></canvas>
+                    <div class="metric-label">THREAD GEOMETRY</div>
+                    <div class="metric-value" id="threads-value">0</div>
+                </div>
+
+                <!-- New Enhanced Metrics -->
+                <div class="metric-surface" data-metric="security">
+                    <canvas id="security-surface"></canvas>
+                    <div class="metric-label">DIMENSIONAL SHIELDS</div>
+                    <div class="metric-value" id="security-value">ACTIVE</div>
+                </div>
+                
+                <div class="metric-surface" data-metric="health">
+                    <canvas id="health-surface"></canvas>
+                    <div class="metric-label">VITAL RESONANCE</div>
+                    <div class="metric-value" id="health-value">100%</div>
+                </div>
+                
+                <div class="metric-surface" data-metric="network">
+                    <canvas id="network-surface"></canvas>
+                    <div class="metric-label">DIMENSIONAL FLOW</div>
+                    <div class="metric-value" id="network-value">0 MB/s</div>
+                </div>
+            </div>
+
+            <!-- System Health Analytics Panel -->
+            <div class="health-analytics-panel">
+                <div class="analytics-header">
+                    <span class="glyph">◯●◯</span>
+                    <span class="analytics-title">CONSCIOUSNESS ANALYTICS</span>
+                    <span class="glyph">◯●◯</span>
+                </div>
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <div class="card-title">SYSTEM VITALS</div>
+                        <div class="vital-metric">
+                            <span class="vital-label">CPU Cores:</span>
+                            <span class="vital-value" id="cpu-cores">0</span>
+                        </div>
+                        <div class="vital-metric">
+                            <span class="vital-label">Memory Pressure:</span>
+                            <span class="vital-value" id="memory-pressure">LOW</span>
+                        </div>
+                        <div class="vital-metric">
+                            <span class="vital-label">Storage Health:</span>
+                            <span class="vital-value" id="storage-health">HEALTHY</span>
+                        </div>
+                        <div class="vital-metric">
+                            <span class="vital-label">Uptime:</span>
+                            <span class="vital-value" id="system-uptime">0h</span>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-card">
+                        <div class="card-title">SECURITY STATUS</div>
+                        <div class="security-metric">
+                            <span class="security-label">Intrusion Attempts:</span>
+                            <span class="security-value" id="intrusion-attempts">0</span>
+                        </div>
+                        <div class="security-metric">
+                            <span class="security-label">Failed Connections:</span>
+                            <span class="security-value" id="failed-connections">0</span>
+                        </div>
+                        <div class="security-metric">
+                            <span class="security-label">Rate Limit Events:</span>
+                            <span class="security-value" id="rate-limit-events">0</span>
+                        </div>
+                        <div class="security-metric">
+                            <span class="security-label">Threat Level:</span>
+                            <span class="security-value" id="threat-level">MINIMAL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-card">
+                        <div class="card-title">API PERFORMANCE</div>
+                        <div class="api-metric">
+                            <span class="api-label">Claude Response:</span>
+                            <span class="api-value" id="claude-response-time">0ms</span>
+                        </div>
+                        <div class="api-metric">
+                            <span class="api-label">Gemini Response:</span>
+                            <span class="api-value" id="gemini-response-time">0ms</span>
+                        </div>
+                        <div class="api-metric">
+                            <span class="api-label">Error Rate:</span>
+                            <span class="api-value" id="api-error-rate">0%</span>
+                        </div>
+                        <div class="api-metric">
+                            <span class="api-label">Cache Hit Rate:</span>
+                            <span class="api-value" id="cache-hit-rate">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Active Agents Portal -->
+            <div class="agents-portal">
+                <div class="portal-header">
+                    <span class="glyph">⧨⧩</span>
+                    <span class="portal-title">CONNECTED ENTITIES</span>
+                    <span class="glyph">⧪⧫</span>
+                </div>
+                <div class="agents-list" id="agents-list">
+                    <!-- Connected agents will appear here -->
+                </div>
+            </div>
+            
+            <!-- Toroidal Communication Portal -->
+            <div class="communication-torus">
+                <canvas id="torus-canvas"></canvas>
+                <div class="input-field-container">
+                    <input type="text" id="thought-input" class="thought-input" 
+                           placeholder="◯ transmit thought-form ◯" maxlength="1000">
+                    <button id="transmit-btn" class="transmit-btn">⟨⟨⟨ TRANSMIT ⟩⟩⟩</button>
+                </div>
+            </div>
+            
+            <!-- Cognitive Trace Spiral -->
+            <div class="trace-spiral">
+                <canvas id="spiral-canvas"></canvas>
+                <div class="trace-content">
+                    <div class="trace-header">
+                        <span class="glyph">◯○●○◯</span>
+                        <span class="trace-title">COGNITIVE TRACE</span>
+                        <span class="glyph">◯○●○◯</span>
+                    </div>
+                    <div class="trace-controls">
+                        <button class="trace-btn active" data-trace="thoughts">THOUGHTS</button>
+                        <button class="trace-btn" data-trace="responses">RESPONSES</button>
+                    </div>
+                    <div class="trace-feed" id="trace-feed">
+                        <!-- Trace items will be populated here -->
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Runic Overlays -->
+        <div class="runic-overlay">
+            <div class="rune top-left">⧨</div>
+            <div class="rune top-right">⧩</div>
+            <div class="rune bottom-left">⧪</div>
+            <div class="rune bottom-right">⧫</div>
+        </div>
+        
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

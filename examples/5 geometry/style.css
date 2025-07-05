@@ -1,0 +1,12 @@
+canvas{
+  position:absolute;
+  top:0px; left:0px;
+}
+
+/* from Ana's css */
+.controls {
+  position: absolute;
+  bottom: 1em; left: 1em;
+  padding: 1em;
+  background: whitesmoke;
+}
