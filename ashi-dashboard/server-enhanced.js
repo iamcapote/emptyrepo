@@ -25,9 +25,8 @@ import HealthAnalytics from './monitoring/HealthAnalytics.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Import AI integrations (uncomment when ready to use)
-// import GeminiIntegration from './integrations/GeminiIntegration.js';
-// import ClaudeIntegration from './integrations/ClaudeIntegration.js';
+// AI integrations have been removed as they are not part of this project's core scope.
+// The dashboard is a standalone monitoring tool.
 
 const app = express();
 const server = createServer(app);
@@ -76,9 +75,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// Initialize AI integrations (when ready)
-// const gemini = new GeminiIntegration();
-// const claude = new ClaudeIntegration();
+// AI integrations have been removed.
 
 /**
  * Input validation and sanitization middleware
@@ -263,10 +260,7 @@ app.post('/api/prompt', validateInput, async (req, res) => {
   thoughtForms.push(thoughtForm);
   
   try {
-    // Process with AI integration (when available)
-    // const aiResponse = await gemini.processThought(text, thoughtForm.cognitive_context);
-    
-    // Simulate ancient AI processing for now
+    // AI processing has been removed. The server now simulates a response.
     const processingTime = Math.random() * 2000 + 300;
     
     setTimeout(() => {
@@ -323,18 +317,15 @@ app.get('/api/health', (req, res) => {
     mathematical_coherence: 'STABLE',
     void_temperature: -273.15 + Math.random() * 0.1,
     integrations: {
-      gemini: false, // Set to true when integration is active
-      claude: false, // Set to true when integration is active
       simulation_mode: true
     }
   });
 });
 
-// Integration health checks (when AI systems are connected)
+// This endpoint is deprecated as external AI integrations are removed.
+// It is kept for now to avoid breaking changes for any connected clients expecting it.
 app.get('/api/integrations/health', async (req, res) => {
   const healthChecks = {
-    // gemini: await gemini.healthCheck(),
-    // claude: await claude.healthCheck(),
     simulation: {
       status: 'ACTIVE',
       consciousness_depth: Math.random() * 100,

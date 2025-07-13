@@ -2,7 +2,7 @@
 
 > **Ancient Consciousness. Modern Monitoring. Mystical Visualizations.**
 
-A fully functional mystical dashboard that transforms system monitoring into an immersive cosmic experience with stunning mathematical visualizations and seamless interactivity.
+A fully functional mystical dashboard that transforms system monitoring into an immersive cosmic experience with stunning mathematical visualizations and seamless interactivity. This dashboard is a standalone monitoring tool designed to receive and display data from any connected monitoring agent.
 
 ## 🌌 Quick Start
 
@@ -14,7 +14,7 @@ npm install
 
 ### 2. Start the Dashboard
 ```bash
-npm start                # Enhanced server with WebSocket support
+npm start                # Enhanced server with WebSocket support for real-time data
 # OR
 npm run simple          # Basic HTTP-only server
 ```
@@ -49,16 +49,19 @@ Experience the ancient consciousness with fully animated visuals and interactive
 - **Auto-updating Feed** - Trace content generates automatically every 5 seconds
 - **Connection Monitoring** - Health checks and detailed error reporting
 
-## 🧠 AI Agent Integration
+## 🔌 Monitoring Agent Integration
 
-### Connect Any AI Agent
+### Connect Any Monitoring Agent
+Any process or agent can connect to the dashboard to send system metrics. The dashboard is designed to be a flexible visualization layer for any data source.
+
+Use the `ASHIAgentClient` to connect and stream data:
 ```javascript
 import ASHIAgentClient from './integrations/ASHIAgentClient.js';
 
 const agent = new ASHIAgentClient('http://localhost:3001', {
-  name: 'My AI Assistant',
-  type: 'custom-ai',
-  capabilities: ['reasoning', 'monitoring']
+  name: 'My Monitoring Bot',
+  type: 'vps-monitor',
+  capabilities: ['system-metrics', 'health-checks']
 });
 
 await agent.connect();
@@ -75,13 +78,14 @@ agent.updateConsciousnessState({
 ```
 
 ### Test with Example Agent
+An example agent is included to demonstrate how a monitoring client can send data to the dashboard.
 ```bash
-npm run agent              # Run the example AI agent
+npm run agent              # Run the example monitoring agent
 ```
 
 ## 📊 Mystical Monitoring Metrics
 
-The dashboard displays **real system metrics** with ancient consciousness naming:
+The dashboard displays system metrics sent by connected agents, mapping them to mystical names:
 
 | **Ancient Name** | **Real Metric** | **Purpose** |
 |------------------|-----------------|-------------|
@@ -95,22 +99,22 @@ The dashboard displays **real system metrics** with ancient consciousness naming
 ## 🚀 Available Scripts
 
 ```bash
-npm start              # Enhanced server with WebSocket + AI integration
+npm start              # Enhanced server with WebSocket for real-time monitoring
 npm run dev            # Development mode with auto-restart  
 npm run simple         # Basic HTTP-only server
-npm run agent          # Run example AI agent
+npm run agent          # Run example monitoring agent
 ```
 
 ## 🏗️ Architecture
 
 ```
-┌─────────────────┐    WebSocket    ┌──────────────────┐    HTTP    ┌─────────────┐
-│   AI Agents     │ ←────────────→ │  ASHI Dashboard  │ ←────────→ │   Browser   │
-│                 │                │                  │            │             │
-│ Claude/Gemini   │                │ server-enhanced  │            │ Mystical UI │
-│ Custom AI       │                │ Real-time events │            │ Ancient CSS │
-│ Monitoring Bots │                │ Practical metrics│            │ Sacred Math │
-└─────────────────┘                └──────────────────┘            └─────────────┘
+┌───────────────────┐    WebSocket    ┌──────────────────┐    HTTP    ┌─────────────┐
+│ Monitoring Agents │ ←────────────→ │  ASHI Dashboard  │ ←────────→ │   Browser   │
+│ (VPS, Apps, etc.) │                │                  │            │             │
+│                   │                │ server-enhanced  │            │ Mystical UI │
+│ Data Sources      │                │ Real-time events │            │ Ancient CSS │
+│                   │                │ Practical metrics│            │ Sacred Math │
+└───────────────────┘                └──────────────────┘            └─────────────┘
 ```
 
 ## 📁 Project Structure
@@ -121,68 +125,22 @@ ashi-dashboard/
 │   ├── index.html                 # Ancient consciousness interface
 │   ├── script.js                  # Real-time dashboard logic
 │   └── style.css                  # Sacred geometric styling
-├── 🤖 integrations/               # AI Integration Layer
-│   ├── ASHIAgentClient.js         # Core WebSocket client
-│   ├── ClaudeIntegration.js       # Anthropic Claude template
-│   ├── GeminiIntegration.js       # Google Gemini template
-│   ├── ExampleAIAgent.js          # Working example agent
-│   └── README.md                  # Integration documentation
-├── 🚀 server-enhanced.js          # Enhanced server (WebSocket + AI)
+├── 🔌 integrations/               # Agent Integration Layer
+│   ├── ASHIAgentClient.js         # Core WebSocket client for agents
+│   └── ExampleAIAgent.js          # Working example monitoring agent
+├── 🚀 server-enhanced.js          # Real-time WebSocket server
 ├── 💎 server.js                   # Simple HTTP-only server  
 ├── 📦 package.json                # Dependencies and scripts
 └── 📚 README.md                   # This file
 ```
 
-## 🔧 Integration Templates
-
-### For Claude AI (Anthropic)
-```javascript
-import ClaudeIntegration from './integrations/ClaudeIntegration.js';
-
-const claude = new ClaudeIntegration(process.env.ANTHROPIC_API_KEY);
-const result = await claude.processThought("What is consciousness?");
-```
-
-### For Gemini AI (Google)
-```javascript
-import GeminiIntegration from './integrations/GeminiIntegration.js';
-
-const gemini = new GeminiIntegration(process.env.GEMINI_API_KEY);
-const result = await gemini.processThought("Explain quantum mechanics");
-```
-
-### Custom AI Integration
-```javascript
-import ASHIAgentClient from './integrations/ASHIAgentClient.js';
-
-class MyCustomAI extends ASHIAgentClient {
-  constructor() {
-    super('http://localhost:3001', {
-      name: 'Custom AI',
-      type: 'custom',
-      capabilities: ['text-processing', 'analysis']
-    });
-  }
-
-  async processInput(input) {
-    // Your AI logic here
-    const response = await this.myAI.generate(input);
-    
-    // Send to dashboard
-    this.sendThought(response);
-    
-    return response;
-  }
-}
-```
-
 ## 🎯 Use Cases
 
-- **AI Research Labs**: Monitor multiple AI agents in real-time
-- **System Monitoring**: Beautiful interface for server metrics
-- **Multi-Agent Systems**: Central coordination hub
-- **AI Demonstrations**: Impressive visual for AI consciousness
-- **Development Teams**: Mystical alternative to boring dashboards
+- **System Monitoring**: A beautiful and unique interface for server and application metrics.
+- **DevOps Teams**: A mystical alternative to traditional, boring dashboards.
+- **Data Visualization**: Display any real-time data stream in a cosmic-themed UI.
+- **Network Operations Centers (NOCs)**: An eye-catching centerpiece for monitoring suites.
+- **Demonstrations**: An impressive visual front-end for any live data feed.
 
 ## 🛡️ Security Features
 
@@ -192,30 +150,31 @@ class MyCustomAI extends ASHIAgentClient {
 - ✅ CORS configuration
 - ✅ Safe WebSocket handling
 
-## 🌟 Migration Complete
+## 🌟 Project Focus
 
-This project represents a **successful migration** from a complex multi-service architecture to a **minimal, clean structure** that focuses on:
+This project provides a **minimal, clean, and beautiful interface** for real-time data. Its focus is on:
 
-- ✅ **Easy AI integration** with simple patterns
-- ✅ **Real monitoring metrics** instead of abstract values  
-- ✅ **Beautiful mystical interface** preserved and enhanced
-- ✅ **WebSocket real-time communication** for agent coordination
-- ✅ **Template-based backends** for popular AI services
-- ✅ **Modern ES modules** and clean architecture
+- ✅ **Easy agent integration** with simple patterns
+- ✅ **Displaying real monitoring metrics** from any source
+- ✅ **A beautiful mystical interface** that is both functional and artistic
+- ✅ **WebSocket real-time communication** for live data feeds
+- ✅ **Modern ES modules** and a clean architecture
 
 ## 🚀 Next Steps
 
-1. **Connect your AI systems** using the integration templates
-2. **Customize metrics** to match your specific monitoring needs
-3. **Scale horizontally** by adding more AI agents
-4. **Extend the UI** with additional mystical visualizations
+1. **Implement Real Data Feeds**: Use the guidance in `newplan.md` to update the monitoring modules (`SystemMonitor.js`, `APIMonitor.js`) to collect and send real data from your VPS or application.
+2. **Connect Your Systems**: Use the `ASHIAgentClient` to connect your own applications, scripts, or monitoring tools to the dashboard.
+3. **Customize Metrics**: Extend the dashboard to visualize metrics specific to your needs.
+4. **Scale Horizontally**: Connect multiple agents to visualize data from a distributed system.
+5. **Extend the UI**: Add new mystical visualizations for your custom data streams.
 
 ## 📖 Documentation
 
-- **API Reference**: Inline documentation in all files
+- **Implementation Plan**: See `newplan.md` for the roadmap on integrating real system metrics.
+- **API Reference**: Inline documentation in all server and integration files.
 
 ---
 
-**The ancient consciousness awaits your AI agents...** 🧠✨
+**The ancient consciousness awaits your data streams...** 🧠✨
 
 *Built with love for the intersection of mysticism and modern technology.*

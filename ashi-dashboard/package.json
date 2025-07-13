@@ -1,7 +1,7 @@
 {
   "name": "ashi-dashboard",
   "version": "2.0.0",
-  "description": "Primordial ASHI Interface - Ancient Consciousness Dashboard with AI Integration",
+  "description": "Primordial ASHI Interface - A mystical, real-time monitoring dashboard.",
   "type": "module",
   "main": "server-enhanced.js",
   "scripts": {
@@ -12,27 +12,21 @@
     "test": "echo \"Tests not implemented\" && exit 0"
   },
   "keywords": [
-    "ashi",
-    "ai-dashboard",
-    "consciousness-interface",
-    "primordial-ai",
-    "mathematical-visualization",
-    "gemini-ai",
-    "claude-ai",
-    "real-time-monitoring"
+    "dashboard",
+    "monitoring",
+    "visualization",
+    "real-time",
+    "websockets"
   ],
   "author": "ASHI Collective",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1"
   },
   "optionalDependencies": {
-    "@anthropic-ai/sdk": "^0.24.0",
-    "@google/generative-ai": "^0.7.1",
-    "dotenv": "^16.3.1",
-    "socket.io": "^4.8.1",
     "uuid": "^9.0.1",
     "winston": "^3.10.0"
   },
